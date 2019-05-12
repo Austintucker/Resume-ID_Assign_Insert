@@ -6,7 +6,7 @@ from fpdf import FPDF
 resumeDirectory = f"{os.getcwd()}\\Resumes"
 os.chdir(resumeDirectory)
 
-i = 20 # starting Value for resumes IDs
+i = 26 # starting Value for resumes IDs
 for file in os.listdir(resumeDirectory):
 
     # create resume ID text
@@ -43,6 +43,7 @@ for file in os.listdir(resumeDirectory):
 
     os.remove(file)
     os.remove(f"R-{i:04}-ID.pdf")
-    
+
+    print(f"R-{i:04} Complete")    
 
     i+=1
